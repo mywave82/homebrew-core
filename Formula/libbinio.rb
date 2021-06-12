@@ -1,5 +1,5 @@
 class Libbinio < Formula
-  desc "Binary I/O stream class library (used by AdPlug)"
+  desc "Binary I/O stream class library"
   homepage "https://adplug.github.io/libbinio/"
   url "https://github.com/adplug/libbinio/releases/download/libbinio-1.5/libbinio-1.5.tar.bz2"
   sha256 "398b2468e7838d2274d1f62dbc112e7e043433812f7ae63ef29f5cb31dc6defd"
