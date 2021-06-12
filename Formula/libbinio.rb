@@ -3,7 +3,7 @@ class Libbinio < Formula
   homepage "https://adplug.github.io/libbinio/"
   url "https://github.com/adplug/libbinio/releases/download/libbinio-1.5/libbinio-1.5.tar.bz2"
   sha256 "398b2468e7838d2274d1f62dbc112e7e043433812f7ae63ef29f5cb31dc6defd"
-  license "LGPL-2.1-only"
+  license "LGPL-2.1-or-later"
 
   bottle do
     sha256 cellar: :any, arm64_big_sur: "242943ef59b0240db7e61f8ba587bafcb68f080d66dea8b8bb461d2e292fdaaa"
