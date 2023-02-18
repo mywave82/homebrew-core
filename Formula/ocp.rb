@@ -1,10 +1,10 @@
 class Ocp < Formula
   desc "UNIX port of the Open Cubic Player"
   homepage "https://stian.cubic.org/project-ocp.php"
-  url "https://stian.cubic.org/ocp/ocp-0.2.99.tar.xz"
-  sha256 "d00165e206403b876b18edfc264abc8b6ce3d772be7e784fe4d358e37e57affd"
+  url "https://stian.cubic.org/ocp/ocp-0.2.103.tar.xz"
+  sha256 "b526d27e983e292453d2ccc36946ee3efd3ba33ee0489507a9815f2f05a23b5e"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 1
   head "https://github.com/mywave82/opencubicplayer.git", branch: "master"
 
   livecheck do
@@ -25,6 +25,7 @@ class Ocp < Formula
 
   depends_on "pkg-config" => :build
   depends_on "xa" => :build
+  depends_on "ancient"
   depends_on "cjson"
   depends_on "flac"
   depends_on "freetype"
@@ -33,25 +34,18 @@ class Ocp < Formula
   depends_on "libpng"
   depends_on "libvorbis"
   depends_on "mad"
+  depends_on "sdl2"
 
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
-
-  on_mojave :or_older do
-    depends_on "sdl12-compat"
-  end
-
-  on_system :linux, macos: :catalina_or_newer do
-    depends_on "sdl2"
-  end
 
   on_linux do
     depends_on "util-linux" => :build # for `hexdump`
   end
 
   resource "unifont" do
-    url "https://ftp.gnu.org/gnu/unifont/unifont-14.0.02/unifont-14.0.02.tar.gz"
-    sha256 "401bb9c3741372c1316fec87c392887037e9e828fae64fd7bee2775bbe4545f7"
+    url "https://ftp.gnu.org/gnu/unifont/unifont-15.0.01/unifont-15.0.01.tar.gz"
+    sha256 "7d11a924bf3c63ea7fdf2da2b96d6d4986435bedfd1e6816c8ac2e6db47634d5"
   end
 
   def install
@@ -70,14 +64,11 @@ class Ocp < Formula
       --prefix=#{prefix}
       --without-x11
       --without-desktop_file_install
-      --with-unifontdir=#{share}
+      --without-update-mime-database
+      --without-update-desktop-database
+      --with-unifontdir-ttf=#{share}
+      --with-unifontdir-otf=#{share}
     ]
-
-    args << if OS.mac? && MacOS.version < :catalina
-      "--without-sdl2"
-    else
-      "--without-sdl"
-    end
 
     system "./configure", *args
     system "make"
