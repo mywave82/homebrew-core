@@ -1,8 +1,8 @@
 class Lighttpd < Formula
   desc "Small memory footprint, flexible web-server"
   homepage "https://www.lighttpd.net/"
-  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.68.tar.xz"
-  sha256 "e56f37ae52b63e1ada4d76ce78005affb6e56eea2f6bdb0ce17d6d36e9583384"
+  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.69.tar.xz"
+  sha256 "16ac8db95e719629ba61949b99f8a26feba946a81d185215b28379bb4116b0b4"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,13 +11,13 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "1a30aefdaab4819bee28c3f63da0867f0031f825cd4dac522744b4d19162bc29"
-    sha256 arm64_monterey: "9dcbe27271a0cfb493dede9c97f5eb262c14e7f0e8fbb7aacced962040771f45"
-    sha256 arm64_big_sur:  "b50b76039099704c744783debd8be8e392305e321ced2943063e1af7e9173002"
-    sha256 ventura:        "3b12c865b261aaee2a999dfa73256b3cf1b55c3f2068ac41f60739d815657187"
-    sha256 monterey:       "57ed3baffc69083d2d203e250f0b9320f90014a33901b930724594ae465bd18c"
-    sha256 big_sur:        "d5d5f82673b4f4be6cde5a1f5b0af436c0eb5464288a8c95c59b9b18e31ea40a"
-    sha256 x86_64_linux:   "7b0bc2fcaf8480de212268387ecd77162d89760a817c17d130c0d55a417c9445"
+    sha256 arm64_ventura:  "a071a43e67f774e6008847e976b4ff1f59513e302b89e7eef7a3f6b887d1e50b"
+    sha256 arm64_monterey: "4f9c220cfb9ce6a5d0d9d4ff0268c818e8b995e8d18bfeb69ecc56622eee340b"
+    sha256 arm64_big_sur:  "1a17f721a33ef48f80e4d708fd07dfb3ac1577e5bf403be2d2762e7a685d71e1"
+    sha256 ventura:        "7cae468376deb3df8d95d93929ec1d6ecb15c961cb13fb3dee0afdf2bfe17354"
+    sha256 monterey:       "c8731b77cc633d4600064d7fc597d0cadd5d0f6a64c6c86d786ccad44d5b6aa4"
+    sha256 big_sur:        "b0043ccc2c0fea482d3ae04edbc506acf98c3ee047c1842a720b52be30bc3e6b"
+    sha256 x86_64_linux:   "9656af82353608c103f01f626e99b4b20cabf90499e495b0d1b3686c76d49ed1"
   end
 
   depends_on "autoconf" => :build

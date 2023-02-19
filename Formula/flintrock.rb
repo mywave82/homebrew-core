@@ -9,14 +9,14 @@ class Flintrock < Formula
   revision 5
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "a10b3b6a0438862b4537ae6f1b2cad78baa90c0fe895cb5167ab5fe8da7a1445"
-    sha256 cellar: :any,                 arm64_monterey: "bf098d99c7b716732b437e6c2a9d94cec7b858123a8358ae4dcf91120089f36c"
-    sha256 cellar: :any,                 arm64_big_sur:  "ace2aac413d9dc3b99adad311f1e9d8cddddcf0fbec3475e00c17fd2e2858a60"
-    sha256 cellar: :any,                 ventura:        "6db7941afebb02d80a862d771dc3288e5138a54ba613d32189de198445b65159"
-    sha256 cellar: :any,                 monterey:       "f0b0e0ec5b10cac8eca12a5bfb2fadbcce5a6213730ef16f2adf7275988f9c2e"
-    sha256 cellar: :any,                 big_sur:        "e67f51b431878d1d76952cbd58ab5693b3070dc0127b81e35f7ef6c25a883dd7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae15dcf1a34b873376377f124dd22a2b564ab6c41c9f4a122d8388d02aec6aed"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "af7b03cf4466a5dc871c9cdfcb5b4742695043aa830dfc7f723e7404adff26b7"
+    sha256 cellar: :any,                 arm64_monterey: "c1d8922635deb4237cfed541614f3d3dfb1ed249882f7f02cef3a316f75f5733"
+    sha256 cellar: :any,                 arm64_big_sur:  "1277c8fca9d74dffc5efafd87ee9f80edf51215b55d001c623bd8218454db3c9"
+    sha256 cellar: :any,                 ventura:        "3f50f2f7974ae7e265acf01d995fae388a899d77749ab4abac9dd3f90ab3cbfb"
+    sha256 cellar: :any,                 monterey:       "a04996f9fd2d1fb31895a88243c0a7a3a7719c5e343518c2fde9fd12c8c990de"
+    sha256 cellar: :any,                 big_sur:        "36ba8bafc43846970c4fa7149ede83f30dd31a2f0b6dee9758cd23b79e095e83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d612d02cba4d04b5d128e9e72a7a07ec100f1dc47299e32aa55dd576a2c34d9d"
   end
 
   depends_on "rust" => :build
@@ -49,8 +49,8 @@ class Flintrock < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "jmespath" do

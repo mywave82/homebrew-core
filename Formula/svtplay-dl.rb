@@ -8,14 +8,14 @@ class SvtplayDl < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "d7ef07861f284a24421d67e1d624061e63468ca299bddd79e495ee806d9b7e63"
-    sha256 cellar: :any,                 arm64_monterey: "7dd75d77cb3b7f9ac2113a6a5f806949cc089b02e3b6cd9f8d622408a82ecf99"
-    sha256 cellar: :any,                 arm64_big_sur:  "1fc38997be334c1f75d41f9229b91886a9f626f87d686a3709ae6ab3e9842c3b"
-    sha256 cellar: :any,                 ventura:        "06f920994780203a3e59f30ccf64163946e6856e33c4d104db673d57cda1f0a3"
-    sha256 cellar: :any,                 monterey:       "fbb5276cec60bdc75ea21bca3e4f8a527f6bd967411e96ce04e2889f19d8fa3d"
-    sha256 cellar: :any,                 big_sur:        "e5a58a9e6016529dd800a97913eeb4c0f144abe84f6a75e733f8f92e5c4eab38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a7a40bf512e7d750eba1c7a73be87281501e6089ce06bd137faff50cfd340b8"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "966d530f3d8be99fc8755c63ef763b065b14cf80f039739cfd639570f25dcc4b"
+    sha256 cellar: :any,                 arm64_monterey: "5e7a98c88626f34659b37da3be0b7a0855c7cfd94ec4804a0b9b9ee9dff5a68a"
+    sha256 cellar: :any,                 arm64_big_sur:  "526e1e0d32e0141dc6bf4f2cdc17d1bea91999bde332c135c07c9773a556ec38"
+    sha256 cellar: :any,                 ventura:        "aa62a12154ab1526b59e1f3cd99927587513ea0b50eb97409b0bedecf3e0d411"
+    sha256 cellar: :any,                 monterey:       "60d20000645a6d0696c3bae746fb341e0b0464d3bc4bd563af87f0197fc8d50c"
+    sha256 cellar: :any,                 big_sur:        "0661d1889c33bf279802dbfd7c4d98377596bd544bba9bec77c9aed539521c7f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7fd7a3564b1acc64a3eac087ceb2a3960dc9073d22c70164df9fc059a55c66f"
   end
 
   depends_on "rust" => :build
@@ -39,8 +39,8 @@ class SvtplayDl < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "idna" do

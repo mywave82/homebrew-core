@@ -4,8 +4,8 @@ class Rust < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   stable do
-    url "https://static.rust-lang.org/dist/rustc-1.67.0-src.tar.gz"
-    sha256 "d029f14fce45a2ec7a9a605d2a0a40aae4739cb2fdae29ee9f7a6e9025a7fde4"
+    url "https://static.rust-lang.org/dist/rustc-1.67.1-src.tar.gz"
+    sha256 "46483d3e5de85a3bd46f8e7a3ae1837496391067dbe713a25d3cf051b3d9ff6e"
 
     # From https://github.com/rust-lang/rust/tree/#{version}/src/tools
     resource "cargo" do
@@ -16,13 +16,13 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3bbd58b85e50f6c31c5b82cae21d4383eff1e2d79e61a1f643b0e4aedae6572a"
-    sha256 cellar: :any,                 arm64_monterey: "066b6e74a770b167be246eee8b326c8064cea914b81a4e388bf9f49a8598ab39"
-    sha256 cellar: :any,                 arm64_big_sur:  "2cf530434f03aa428bed091c8dbb63e6565448b745a20ce5fd5f8145a5104cd3"
-    sha256 cellar: :any,                 ventura:        "e2d9095c9427f19a312fe7891c5d52d44ed38df75f74f157b860cd7e0ff88687"
-    sha256 cellar: :any,                 monterey:       "7409ae34d1d4b9cc7d73020cd8fffdd0976b2a408ea145bcdee0dfbcdbb356bc"
-    sha256 cellar: :any,                 big_sur:        "52a3955701e37250e567cc7fe97e72b6a74f4661c3ffff235b5a9e7dee6b7d42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "648baa476595b6e836a979b235cee7d540cf7921990d9c0a2ca486b807e07a34"
+    sha256 cellar: :any,                 arm64_ventura:  "df3cbab60fc9a438f060d5042efc4103d3ab8a7b27724f422fbfaec272597a4c"
+    sha256 cellar: :any,                 arm64_monterey: "8606b4f6b7e427a6237a546fd45f3f34a2cefdafced6ae23c020a2ba08d14899"
+    sha256 cellar: :any,                 arm64_big_sur:  "cee6151bf547e363fdd29ff3008cd65fc3e20c5eb4823a0492520cfd4dfb093e"
+    sha256 cellar: :any,                 ventura:        "cb7a5141c59398df791ce4548f9da734467d59a57d06ee63c92e14f2adfde397"
+    sha256 cellar: :any,                 monterey:       "165442905d4c1a5eefd1bdd4f102d9cb7af10ce0fabd4c2a9042862ee70e0103"
+    sha256 cellar: :any,                 big_sur:        "18628b284c48f003dd713e68950cba61c20d30c524c09b43bb89608d2f45ec82"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "223c48304b05004debb31357860f041a5513a93decb73608ca61db29ea51a138"
   end
 
   head do

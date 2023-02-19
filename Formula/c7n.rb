@@ -3,8 +3,8 @@ class C7n < Formula
 
   desc "Rules engine for cloud security, cost optimization, and governance"
   homepage "https://github.com/cloud-custodian/cloud-custodian"
-  url "https://github.com/cloud-custodian/cloud-custodian/archive/0.9.22.0.tar.gz"
-  sha256 "05d99fd9f2e348d2bd6c924469da94ba3b12a1a2db5639aa0009110a18c337c6"
+  url "https://github.com/cloud-custodian/cloud-custodian/archive/0.9.23.0.tar.gz"
+  sha256 "531b54c437c34f061dc3df694b2915d60b59ac51a7858654ba50f0d7507af53d"
   license "Apache-2.0"
 
   livecheck do
@@ -13,13 +13,13 @@ class C7n < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a98e229fa2c6881181c7036a2da3c9a3256decc5caece6b0d6a05d37860c74b8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6efc81eda049d2b47489714ce01a35b81ada33c4f2f151f057e0d19166f6e20e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a321ceb0e742a93605331e6a7705bdc0869b4aa2a878aed56dcc61c18e3d3fab"
-    sha256 cellar: :any_skip_relocation, ventura:        "2415cd2c1ba0ee891c4905e4cb5b6ba28574ba80e034ff555b2bbd1231cdc037"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1f6fabb0aeeb50a3cdc9aabe7c174463dde4636b945dda4c85fa6532b97c5d1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0270e626ce4325fda86e804f0b0b663e332f26892681f32534d2d273176bc4df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "431bca43bf505e2f0098cd1d1ff126b01623788a379bbc98cf6b796ea5dbcff9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9d583455e7c5eb02b31a748d8527626c2abdb8cb3ddfbaf0154df588aaf1fa56"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "adeb8046bcf5161b310cbb6f28b0dbea5627178c755bc09f8f1496ce6fe1c792"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97d0cfad658587e6a96ffb8409c2ec7d544784462e24625547bb48b1ece59243"
+    sha256 cellar: :any_skip_relocation, ventura:        "483951c6973ba508374759a41b13cd4846720966c54ff7b1295f304642cd7a3a"
+    sha256 cellar: :any_skip_relocation, monterey:       "3f823be6d71af6a8c5cefe608c02a43e82bc32c23d2627fb291f43166045a8a6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0dfd6e9b9297cfd6d71c5ce524305b93d2e28aa2dfe6e1b6c5115f481624e043"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "284b8b7932e17e5a14ef95870f16615cc4d768821233901623aa0d6cc05aea81"
   end
 
   depends_on "python-tabulate"
@@ -38,13 +38,13 @@ class C7n < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/74/e6/f5167f2c905089966e696dcd204cfcd234717bd09ee1882d625bc8aed686/boto3-1.26.52.tar.gz"
-    sha256 "0b1f82d4565ed875c7975ac0be5665e8d948613c01bcb0e49df6d4f5af670cc8"
+    url "https://files.pythonhosted.org/packages/27/77/d3ff0ad78cc0e7b37175c9002ad60ebeb5e6dabc5a358d03577c155d8869/boto3-1.26.72.tar.gz"
+    sha256 "5d6e19d148c4a9d5d85f0d96570d11264f23db610f1e3c9a8b7e8b6898424691"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/50/ee/f48701d596846dae86346a0a84f7911108bc7a38ee271e150ebf2c057dc5/botocore-1.29.52.tar.gz"
-    sha256 "a0b89a33305cfa6251c6e1142deb7567e216e37e25363159f45fb81dc5b474e5"
+    url "https://files.pythonhosted.org/packages/85/d8/b3ed4e4176bb7fa3d6e08b94a9b94a13315478162d55ac61b785a6233cb1/botocore-1.29.72.tar.gz"
+    sha256 "8710f53af0e20f08f36a3bf434d18bc7ceba5d9835495b02aedbedd35df5de9a"
   end
 
   resource "docutils" do
@@ -88,8 +88,8 @@ class C7n < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/8e/b3/8b16a007184714f71157b1a71bbe632c5d66dd43bc8152b3c799b13881e1/zipp-3.11.0.tar.gz"
-    sha256 "a7a22e05929290a67401440b39690ae6563279bced5f314609d9d03798f56766"
+    url "https://files.pythonhosted.org/packages/d1/2f/ba544a8a6ad5ad9dcec1b00f536bb9fb078f5f50d1a1408876de18a9151b/zipp-3.13.0.tar.gz"
+    sha256 "23f70e964bc11a34cef175bc90ba2914e1e4545ea1e3e2f67c079671883f9cb6"
   end
 
   def install
@@ -119,7 +119,7 @@ class C7n < Formula
             tag: CreatorName
             principal_id_tag: CreatorId
     EOF
-    output = shell_output("custodian validate --verbose #{testpath}/good-policy.yml 2>&1")
+    output = shell_output("#{bin}/custodian validate --verbose #{testpath}/good-policy.yml 2>&1")
     assert_match "valid", output
     # has invalid "action" key instead of "actions"
     (testpath/"bad-policy.yml").write <<~EOF
@@ -133,7 +133,7 @@ class C7n < Formula
             tag: CreatorName
             principal_id_tag: CreatorId
     EOF
-    output = shell_output("custodian validate --verbose #{testpath}/bad-policy.yml 2>&1", 1)
+    output = shell_output("#{bin}/custodian validate --verbose #{testpath}/bad-policy.yml 2>&1", 1)
     assert_match "invalid", output
   end
 end

@@ -3,18 +3,18 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://github.com/ansible/ansible-lint/"
-  url "https://files.pythonhosted.org/packages/24/22/0814ea4b02b0884e31e5d6d8102617524136ed62d3e96787751bbec0bef7/ansible-lint-6.12.1.tar.gz"
-  sha256 "bbb1953aa563baa2587edb6efa94bf4805846ab01fb596e718c48f9a79a99a89"
+  url "https://files.pythonhosted.org/packages/55/40/389a376cf6fa992374ac7eaa64985b297d614135ebbef0c0f5d12ad1bbb4/ansible-lint-6.13.1.tar.gz"
+  sha256 "435c12b4fd88da815af6821f3bf8b04ebb651811da89a11c9d190baff21badaa"
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f217bcdd325565551031f791a005f5919d2b0a69ba1e9ca940e319994d8e03e7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "be9013d8d6e6197bbfe5326f50311badf13e5bc76d47bdeea000f6a77afb1c40"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eda599ed40ecea9a5ef972134dcaba297dc15e20189f6f7bd97c1cf5b244b735"
-    sha256 cellar: :any_skip_relocation, ventura:        "51df0e6e94aca5427db5ccb10e400180f1fcd4561eef65b5334a2b5f6dbb066f"
-    sha256 cellar: :any_skip_relocation, monterey:       "cccf19b9ea0bc7e3a110af7aec1e728a05ed382d25bc0241eacd39606b10db1a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5347a863ea4ab84ad6ec2500100dc5fd95adc4e4f392ef9e37e6352d54a98f6e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc3c77328dcb94f3e468b3375c87e5b971eb03f9b9bd697f6949e0d0e4e921ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "71eeaa2e471d11c3830b552c35c7bfa842b8cd75194f44e3ff2ccfb8ed8054cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "809161f10f7b38544e29ecb554221d7206f474c4a95f818e34972102d6671eef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63e1c774d7cf14ba4c6bc4323fd0d2fc7df066ac2bbe9da5f758130fab5fa447"
+    sha256 cellar: :any_skip_relocation, ventura:        "e60d5938ad15fa28c0fd61108154501e10661a24b4221142db612d006ebe5a1e"
+    sha256 cellar: :any_skip_relocation, monterey:       "03b83e0305d2889198ca0935fa24f7eada7ed6f203015b7d2be0937a94dec89d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8ac80fdf9063d0373447111949445d39111ab98d86fde36a53197bdcac06a79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00545a90c8a2169897cb33f4681e2d7156ae3bad73a66395f3591ac5ee10c541"
   end
 
   depends_on "pkg-config" => :build
@@ -24,11 +24,6 @@ class AnsibleLint < Formula
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "yamllint"
-
-  resource "ansible-compat" do
-    url "https://files.pythonhosted.org/packages/90/a2/a7228ad38339ac104d70e3a2e70744557c41fa34e8d4773382c852991ef9/ansible-compat-3.0.1.tar.gz"
-    sha256 "d7dc5e4b7fade9b7375c568a24475b7be81024cac2a20caef3260ef0b51287b4"
-  end
 
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/21/31/3f468da74c7de4fcf9b25591e682856389b3400b4b62f201e65f15ea3e07/attrs-22.2.0.tar.gz"
@@ -104,10 +99,11 @@ class AnsibleLint < Formula
     ENV["ANSIBLE_REMOTE_TEMP"] = testpath/"tmp"
     (testpath/"playbook.yml").write <<~EOS
       ---
-      - hosts: all
+      - name: Homebrew test
+        hosts: all
         gather_facts: false
         tasks:
-          - name: ping
+          - name: Ping
             ansible.builtin.ping:
     EOS
     system bin/"ansible-lint", testpath/"playbook.yml"

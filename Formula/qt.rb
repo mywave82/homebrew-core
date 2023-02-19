@@ -12,7 +12,7 @@ class Qt < Formula
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
     "LGPL-3.0-only",
   ]
-  revision 1
+  revision 2
   head "https://code.qt.io/qt/qt5.git", branch: "dev"
 
   # The first-party website doesn't make version information readily available,
@@ -23,13 +23,12 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a0f5604e855d45eff79de612c11b561d637c4da60c0e5ee2e1741196913f0b88"
-    sha256 cellar: :any,                 arm64_monterey: "48ffc4065dd5f47b9a4b4db85809aea6a4a7a45cc8fbd0190136b2e984ca84dd"
-    sha256 cellar: :any,                 arm64_big_sur:  "fabbdf9bbe7d07f337580e906e0a1304068d2c2a34ed9d792dd6b4478f63150f"
-    sha256 cellar: :any,                 ventura:        "ed67c9682499259d51678b1fd491b1aff19528bbfbb9ddcfaf304080a81d64b8"
-    sha256 cellar: :any,                 monterey:       "0076c1ac4d9ae7e82c098f1de91e04c8bb53d3a2a5f6eabc7bea036beee530ae"
-    sha256 cellar: :any,                 big_sur:        "af6d693fae6c9f5961c1e25cd418cd5a689894306ee1b14458664b5c9b7f5120"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "196dbb17d1012a0fd39e560304a6f510168a5a990ccd3d7d28993ca3e5d2966b"
+    sha256 cellar: :any,                 arm64_ventura:  "45dabce103a8140b9a56d0aea580306ae81f82d8ee753beb9ea4afdc09b8fe98"
+    sha256 cellar: :any,                 arm64_monterey: "8fd9bbbb14873e1a5ae33dc5866e3a9b9bec56cc456e1cad7795f791c4f6a957"
+    sha256 cellar: :any,                 arm64_big_sur:  "4dd69ceca59057848e6e9af3b799327482cef5412fa9a8f28aa44f292b121414"
+    sha256 cellar: :any,                 ventura:        "41edb8ee74fe237eec36bbdd8434d06e8eac19d51bb493cd6272e661c31fe905"
+    sha256 cellar: :any,                 monterey:       "cc11428e2de36cff12f81c0b2f89469d2e80eb4e8e90680d4e81145a6a7191ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "699fca2256a52c1d803103abd7c5c48a7dc2685f0241adabea4168e4fba233fa"
   end
 
   depends_on "cmake"      => [:build, :test]

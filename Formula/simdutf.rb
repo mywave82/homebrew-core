@@ -1,24 +1,24 @@
 class Simdutf < Formula
   desc "Unicode conversion routines, fast"
   homepage "https://github.com/simdutf/simdutf"
-  url "https://github.com/simdutf/simdutf/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "9757a04085ad3ebab9fe933d9198ec6b84a857632a540418b6cfeb7b889a8017"
+  url "https://github.com/simdutf/simdutf/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "0d9f63e2f308b6b54f399ebbe3a02776b902a2670c88c28de2d75ea2197dc4e9"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/simdutf/simdutf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "90ab4d3b107d95ee82941560c14ca9ab9912829965c6ae7a5774efecd2092c7c"
-    sha256 cellar: :any, arm64_monterey: "19bbfffb80455f1be3cacf8398c666acb46e358037f4918c775ae0f8ec5240ea"
-    sha256 cellar: :any, arm64_big_sur:  "6bcd4b61d7063fb60ee335922be5e283e42c875832a941e461ab10de475971d3"
-    sha256 cellar: :any, ventura:        "e490e2e4cca0e8478364e7292c5955bacf5b7e2860ba3cf3465b3020aa5a29bd"
-    sha256 cellar: :any, monterey:       "4eb2d1eb0d5dc853e027dcaca9e6be2cb2b3ea52499ea212f5e687732d435883"
-    sha256 cellar: :any, big_sur:        "d8f8b95dd77a049728d8ed177d0f4260294afd97fae386eb468d5db865756c80"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "ebe6a9025c9f78ebdb16b525c4459de52195b2ed5f90ab364d4f8b36bee5aaf1"
+    sha256 cellar: :any, arm64_monterey: "0575b6ec23391dea888a811a03fc62869426208ab03988fc7f64ab0189c946b3"
+    sha256 cellar: :any, arm64_big_sur:  "524d428c5d2f96e04ae27da1ed72152d47c457a2e847cdf2eb706075c4826bcd"
+    sha256 cellar: :any, ventura:        "8fa829f3459e958877d502e903c76523f37f6102052b49bbe238cd61b3b22a7f"
+    sha256 cellar: :any, monterey:       "e43ba6dff9f3786e540474640c0da6330c2400a189e6eb4fbb365f55da571581"
+    sha256 cellar: :any, big_sur:        "3ed5c979a418c38801a77c9ca2b8b46d280b7634838fc3eb11a6c24630246b16"
   end
 
   depends_on "cmake" => :build
   depends_on "python@3.11" => :build
   depends_on "icu4c"
-  depends_on "libiconv"
   depends_on macos: :catalina
 
   def install

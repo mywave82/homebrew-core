@@ -19,6 +19,14 @@
     ],
     "exclude_packages": ["pycrypto", "six"]
   },
+  "ansible@6": {
+    "extra_packages": [
+      "docker", "python-neutronclient", "shade", "pywinrm", "kerberos", "boto3", "apache-libcloud", "passlib",
+      "zabbix-api", "junos-eznc", "jxmlease", "dnspython", "pysphere3", "python-consul", "requests-credssp",
+      "openshift", "pexpect", "ntc-templates", "proxmoxer"
+    ],
+    "exclude_packages": ["six", "PyYAML"]
+  },
   "ansible-lint": {
     "exclude_packages": [
       "PyYAML", "yamllint", "pathspec",
@@ -242,6 +250,9 @@
   "gcalcli": {
     "exclude_packages": ["six"]
   },
+  "gdbgui": {
+    "exclude_packages": ["six"]
+  },
   "gcovr": {
     "exclude_packages": ["pygments"]
   },
@@ -425,6 +436,9 @@
   },
   "onlykey-agent": {
     "exclude_packages": ["six", "Cython"]
+  },
+  "openai-whisper": {
+    "exclude_packages": ["torch", "numpy", "PyYAML", "huggingface_hub"]
   },
   "openstackclient": {
     "extra_packages": ["python-heatclient", "python-octaviaclient"],

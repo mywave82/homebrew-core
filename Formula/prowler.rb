@@ -3,18 +3,18 @@ class Prowler < Formula
 
   desc "Open Source Security tool to perform Cloud Security best practices"
   homepage "https://prowler.pro/"
-  url "https://files.pythonhosted.org/packages/ee/27/81fa9b6ac286c1c5b5278e86e95cd922c28ef5401918537485a627acbdb8/prowler-3.1.3.tar.gz"
-  sha256 "96bf5dbbe68feaac07b2519d071306540c0ce87932d6217ff06f460ba5960183"
+  url "https://files.pythonhosted.org/packages/09/45/305314207b8d06efc33e31c0c9ab1fcffdb0b10eeadf6f9379ebbd422049/prowler-3.2.0.tar.gz"
+  sha256 "68d207f6c3a562affc2717987994a7b1cf7efa8306d45838e51629d3fea9b3bc"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5016cc7cd71de4d30e01957f55abd9977fbb27bcd55ac78ff329767a2b8c9985"
-    sha256 cellar: :any,                 arm64_monterey: "347e1198be6c02821dd16781bc7317c214a0d6398ed5e36085c0b370c8d280b5"
-    sha256 cellar: :any,                 arm64_big_sur:  "0772811ac17e83d714ec8ae7e654ea99d6de37047009eadff9bcda0b9ceed939"
-    sha256 cellar: :any,                 ventura:        "9823ba2a7e648933e30ee65158dce37f529c7918fa7e8e91b7cd093f4846a9ba"
-    sha256 cellar: :any,                 monterey:       "c86aa99a647d10295eb1a1e059056ff1930e9b210ea7c2f071fa1a80267097a1"
-    sha256 cellar: :any,                 big_sur:        "b4b4be7581a808bc6bb90c75bd2b408c17945d2eb93ce117f8e68547d76253bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4ebd7a49475663954c457f7e0dc73d3cecf35463b5d064ef8030d6168382074"
+    sha256 cellar: :any,                 arm64_ventura:  "680ee4a278efeebea35a847dc54e13f947de4818a9ab9aae5d7bc76f3562c002"
+    sha256 cellar: :any,                 arm64_monterey: "d469dcee04a8f7b63349be30035a127fafc7ff087730e697437ba4456ee7ec72"
+    sha256 cellar: :any,                 arm64_big_sur:  "7700278cab561829bf64d97c64a6663113b5bd4f57d17b10f9836120834d090a"
+    sha256 cellar: :any,                 ventura:        "4470859d8656125b0627d7dd12c0a19f3430a56d3d94d5ff2686bf3fd6092a0a"
+    sha256 cellar: :any,                 monterey:       "1aa5b18e346f3448101caf63f711080bd486f04361b91bd4e78e363de04e1072"
+    sha256 cellar: :any,                 big_sur:        "3134e4e8bc7914e7907a541011ebbee44e232e8316d3f4263cd57715fee31020"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c53a7c52f5bd24cdc841293596aaa46ffd098c0a029b053b786d4d23e534f09a"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -85,13 +85,13 @@ class Prowler < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/f5/06/b3723636e094e833bba96b33cee496cd47ccc7362f5f3422d15d96644f7f/boto3-1.26.64.tar.gz"
-    sha256 "b0e3d078ec56bc858cc5edae4cda3eed2b1872055828cf5f22d83fc6f79a6d40"
+    url "https://files.pythonhosted.org/packages/c0/63/5dd782da5653528c35ca2ec7f44a41ec3121cda8701f14c6416912118dc6/boto3-1.26.69.tar.gz"
+    sha256 "eb8cde24a4c5755c35126e8cd460e6b51c63d04292419e7e95721232720c7e5b"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/60/91/cda3984eed3ad1cd58c192184b647ab45a5f696c19555959076e7be81cd2/botocore-1.29.64.tar.gz"
-    sha256 "2424c96547eeb9b76eb5bcee5b5bc01741834f525ecc4d538d71d269c7ba6662"
+    url "https://files.pythonhosted.org/packages/db/31/720ac07bd096fdd24fbeb42111638b41fd220e618790b94ada77a6bd1f3e/botocore-1.29.69.tar.gz"
+    sha256 "7e1bebca013544fbc298cb58603bfccd5f71b49c720a5c33c07cf5dfc8145a1f"
   end
 
   resource "certifi" do
@@ -130,8 +130,8 @@ class Prowler < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "detect-secrets" do
@@ -253,7 +253,7 @@ class Prowler < Formula
     assert_match "rds", shell_output("#{bin}/prowler aws --list-services")
 
     assert_match "NoCredentialsError -- Unable to locate credentials",
-      shell_output("#{bin}/prowler aws --quick-inventory 2>&1")
+      shell_output("#{bin}/prowler aws --quick-inventory 2>&1", 1)
 
     assert_match "Prowler #{version}", shell_output("#{bin}/prowler -v")
   end

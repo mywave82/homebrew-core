@@ -1,17 +1,17 @@
 class Swiftplantuml < Formula
   desc "Generate UML class diagrams from Swift sources"
   homepage "https://github.com/MarcoEidinger/SwiftPlantUML"
-  url "https://github.com/MarcoEidinger/SwiftPlantUML/archive/0.7.3.tar.gz"
-  sha256 "10cbed4256e8cf0cff8a9b4042b124acba4eb44fbb75fc639d61a1ba2d29c4aa"
+  url "https://github.com/MarcoEidinger/SwiftPlantUML/archive/0.7.4.tar.gz"
+  sha256 "8b8678f7a307448b3147b8fcfb09bca68ecdf124c2cc6ed7a9c2f4e8be302bde"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "991717c59af13fe1b71580c08b2d554bb565d38bbe2baffc2ea115d80e1c8d19"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "621ca72360541eff69a9ebc0fb561a8097db7f3412c33fb2a01374d30c6debad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15614a7b3b26a627a98f69ef6fae3905c42e436bb71a964371ae7235589a6d6e"
-    sha256 cellar: :any_skip_relocation, ventura:        "f1892d885c8623042099cee1081f15084179b8c857aacd20ca7182b46fa5e303"
-    sha256 cellar: :any_skip_relocation, monterey:       "da08ce197ccc81c898637b5627d2223f1237e1fc6fb23fdd807292ca2e5f70b3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b4e558914b75596956948c957a28ebaf6e04c3f20604acf68b67a1dee40bb64d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b1b3d42ef1578e67cfbca58eccbc3bc1f88ca2bd869c734af081e3087caab5a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc2279239ccd2da1c6b183d2acc7b288c13d3d61697b8d1a5d3557e7871704a9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "debd729d8d5138645d61b30b74baae1b6779ac5213d77ee86e61681d3fa9951d"
+    sha256 cellar: :any_skip_relocation, ventura:        "17b30d7872d734606f330585b96164eeeff4f7134a90904aaade1d29fceef158"
+    sha256 cellar: :any_skip_relocation, monterey:       "19303b80ce22e8ab6551c246dd0a9cfa74390ff2a1323cee06ba838f854a3799"
+    sha256 cellar: :any_skip_relocation, big_sur:        "88a29cbe87015344d9233d5af09e6f8a537e9d6cd0b5b946042bea97fbb8415a"
   end
 
   depends_on xcode: ["12.2", :build]

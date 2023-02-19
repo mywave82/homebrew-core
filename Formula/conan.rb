@@ -3,19 +3,19 @@ class Conan < Formula
 
   desc "Distributed, open source, package manager for C/C++"
   homepage "https://conan.io"
-  url "https://files.pythonhosted.org/packages/f0/f1/876a916cd7a5f89d838842cb3d3c52251aeaa6dabc92db0f53b9c417e610/conan-1.58.0.tar.gz"
-  sha256 "001039c40b523ac3b26bb675eb90887760b06c657a0d10d60157e382ba2f9b73"
+  url "https://files.pythonhosted.org/packages/41/b2/839b3bdd1a02e0d32c13a49ce6fe8239535997736cafab864a0eb351e5ac/conan-1.59.0.tar.gz"
+  sha256 "161c8f2d3193c209a1e9525fe7d6c600688da529a9864e6ef557133e93131952"
   license "MIT"
   head "https://github.com/conan-io/conan.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "450a9ecdd23e0e8c2be6879e0ae40d411dca83096712df74a5b88feb4a668cfb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a669d73e5d831becb8be1ad5c262ca0245c56b745a2d49999dd083fa0d748925"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72cb262077f03a2cba8fb8372e2fc45200359c84bbe3eab09ecf7d96b0f42932"
-    sha256 cellar: :any_skip_relocation, ventura:        "d754abc68e007fd28e03a23f31d7fbff2a844c5eb9b9b940a4f8fc42a2873971"
-    sha256 cellar: :any_skip_relocation, monterey:       "7fdb00cca7bec1c854dd9c5e797f8e453d4707182b4f47aef5744a3d5a4823fb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a17ece177b2aba28e65da453a037ca5231dc85ce44dd8f189b877f7739f91304"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e24135ba1f784f5be5252ccac74d314a7186ddacada30d582cb0cefc4851372e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8284745e47e5372adaf092157cc73aa916d255ca84e4af77d1e4cdf0076b0a91"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "80ed085fc71ca23b6b45f41b62f8fdb5972b92a1289f220eae2d2faa559a65ba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f2d1e1fb3224d2e01a84ceaf86e4426f77638242ba24809b7f0a5d351803639a"
+    sha256 cellar: :any_skip_relocation, ventura:        "bcb90756696ba321a58d1636fe16b3c9a4625084cbb02e719348192d81274d00"
+    sha256 cellar: :any_skip_relocation, monterey:       "4fdf166e078befd4ca495aedcbb8e1144d1df3d0f6810c3b9daae56679750528"
+    sha256 cellar: :any_skip_relocation, big_sur:        "854f4a8c66e85ed10568d0a906a5171dfa7bbf13aa8264bc79ba2b6170e5be5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "902dd9de1c8f5e0f5912ad05a3f805c1a9453bef5c225c4ffad9adaa0ef5864c"
   end
 
   depends_on "pkg-config" => :build
@@ -47,8 +47,8 @@ class Conan < Formula
   end
 
   resource "distro" do
-    url "https://files.pythonhosted.org/packages/b5/7e/ddfbd640ac9a82e60718558a3de7d5988a7d4648385cf00318f60a8b073a/distro-1.7.0.tar.gz"
-    sha256 "151aeccf60c216402932b52e40ee477a939f8d58898927378a02abbe852c1c39"
+    url "https://files.pythonhosted.org/packages/4b/89/eaa3a3587ebf8bed93e45aa79be8c2af77d50790d15b53f6dfc85b57f398/distro-1.8.0.tar.gz"
+    sha256 "02e111d1dc6a50abb8eed6bf31c3e48ed8b0830d1ea2a1b78c61765c2513fdd8"
   end
 
   resource "fasteners" do

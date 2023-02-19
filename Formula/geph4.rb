@@ -1,19 +1,19 @@
 class Geph4 < Formula
   desc "Modular Internet censorship circumvention system to deal with national filtering"
   homepage "https://geph.io/"
-  url "https://github.com/geph-official/geph4-client/archive/refs/tags/v4.7.5.tar.gz"
-  sha256 "399bd61afde4c4bdb5dc5910479e3779df5cd1888c554b0bbd7ae3b97620780c"
+  url "https://github.com/geph-official/geph4-client/archive/refs/tags/v4.7.7.tar.gz"
+  sha256 "a1c17ef8235eabde4a9e0c8d8354ba058d3aaa97add4fa220efa2113fa32399d"
   license "GPL-3.0-only"
   head "https://github.com/geph-official/geph4-client.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0ee5e24a4383a826a15a1d394fe905e7e66ded733417ba08dd9dc58310cf419a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cc75e20687b7d2494ecbfe31f2b0ba8e3e87dc96ad309e9a6d2b55c15cb95337"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "83bf5bb6aec991cadba319169645efb964ae039736a1afecc14620dd79d8110a"
-    sha256 cellar: :any_skip_relocation, ventura:        "9f2a06a62e6c3d50996a1c5e2ea2a888a396ffa5036a2df765d2d2e612feb6e5"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1e4d11282b4a7c42723f1d11c86353d5e120ca4be454dd526533e6691f7c493"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d11eb7af9d82a9f857ed1161b1e366091fed4fb264f2f694b11ff1643cd3ffdf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ff0fd879061c0b805686330c5c793355436098bf20a318129d8e3fcbfcff872"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c6f68af256709edbef37424b932749ff417da8f4aa9ab434ae74727c8881f01e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b67f65a94ad21ec994c6f520d7c32be3751505b789f2ae945c5df689a8aa2c1e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "460b1983d7816a9770d897dab65c64e66dfd1fbac5be34ba50f7db400e2cea2b"
+    sha256 cellar: :any_skip_relocation, ventura:        "28f435dd58671a140bb206c0dc3cde427bf3d65fef0563b59765bec4ce0d9072"
+    sha256 cellar: :any_skip_relocation, monterey:       "8fd4c3fc952f40901bfa0be610eef32e6526ff3a1efc737d847ccf127f20be86"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c4926d5e0637e8b4179445b8bf8688d7b1a45c25be2ba03c841c0c9f18408822"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d36cb6148cee715f3039be3d929547b5438c0dcf8cb78db47c41b5c8f032533e"
   end
 
   depends_on "rust" => :build

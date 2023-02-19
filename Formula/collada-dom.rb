@@ -7,20 +7,21 @@ class ColladaDom < Formula
   head "https://github.com/rdiankov/collada-dom.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "61af8e1cb68c831b2f0e05be428891369cd618a11fa5f599b64fcb7968da6cb5"
-    sha256 cellar: :any,                 arm64_monterey: "a0742c5ac952ccef542876da61ded9131131b24459055f10c80054f1a305450f"
-    sha256 cellar: :any,                 arm64_big_sur:  "b1ddb37ba6194106a32824a45dbf2e4d241b884ce7baca2addd466c08fad015a"
-    sha256 cellar: :any,                 ventura:        "1c8c662ab73e9d52f11e2d68ec1dd79fa81fe7106e5d5cc8439459c06943235a"
-    sha256 cellar: :any,                 monterey:       "3706f35b027bb23dc1e3ec4ead6af0f2c838a2c1a1b5c7afd756896d8868b30a"
-    sha256 cellar: :any,                 big_sur:        "73b7eb7b3cb1396c014dc5985ea1ab2a8b43bb598dec4cd2b21e1ef33f7dc91e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afba4b3a5cd9a4179fcd80ea26097854818f5b1c830b742658365b4ea25c3e87"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "3ae338e6a182aa4ef5162f236dd1eaaae5af7a6bda9b2371b55e90ad1b14b775"
+    sha256 cellar: :any,                 arm64_monterey: "27cb70edcab5aabbc09e3e49b4d4096b7940437f5ee70ccf7cbc37dcc27428c0"
+    sha256 cellar: :any,                 arm64_big_sur:  "56e8736323a26b1aaea44616640bfb571e149365f51768ffbd29b1dd10f5a7dd"
+    sha256 cellar: :any,                 ventura:        "70573c30ce81d80a2adc1fadeaec07f50346f1e1091b8bdbffd426a722f98b88"
+    sha256 cellar: :any,                 monterey:       "a445d8dab60d0b4558650632ad26d5bcc2472679f775222a17b8824cb50d4d3d"
+    sha256 cellar: :any,                 big_sur:        "33265c5810adff137167e86a0db1bb89fbde13c8809f74e857acb173a6a7adf8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e7b2b02132feee5ee2de9b5787a7fc224d71e1cb5e8e5b727cbe5fc02cf815f"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "minizip"
-  depends_on "pcre"
+  depends_on "uriparser"
 
   uses_from_macos "libxml2"
 

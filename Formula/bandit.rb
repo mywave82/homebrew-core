@@ -9,33 +9,32 @@ class Bandit < Formula
   head "https://github.com/PyCQA/bandit.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "915f962f89f0cf0ae432a4fc72901c4529a66a280b22a6d44306efcdc716ff80"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1e17670712be6fee6d21317c108098e3d5144708d133f218deeeaa797c9d98b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "43bd465a694df50d4c6d305d947ee3df3b9d011629a6070ea4960af73a0aa991"
-    sha256 cellar: :any_skip_relocation, ventura:        "c94f859d5644ac37a62613030f07da6b73865b993ece6a0501d7692e87be8906"
-    sha256 cellar: :any_skip_relocation, monterey:       "058d08e4c08317f2516696e3ab71e4145ab8d48106a26edb84be0a2e9c066ba0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d9abf0e13a3b93ee4711cb3524b8e404a5e0dc17ed1c17174477a888218e85eb"
-    sha256 cellar: :any_skip_relocation, catalina:       "c4d190831b21b6110bb3eab21f79406e94b196a57188a744fa137b45fcc00552"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20277723685bcd548b17fcf4639d6ba3bbc3a1638c091b5612816d04f7eb2d15"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "07fdc41db4bce2fdc153c47337a1109a7ebdce8b3efa733a09aa4076218ab47c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f1473ba42ebb0cf7ccc01c2e27a45847c7159a99dab56a52c7abb0368e358c35"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1aeb9aac2d424bb759d5ff9e64498116b37dfb66abce49732361d5da1fc9b090"
+    sha256 cellar: :any_skip_relocation, ventura:        "14fb71a5213aa505cc0f4d7b6ebc8fca7666ec2e9b8bd220a06f73099376e198"
+    sha256 cellar: :any_skip_relocation, monterey:       "7028e989b7b8a3e3486ecdc6b173169a7f2a3a6925326c41988b05e5923ecc59"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f48b01cab5be42c2198088d8eb122798a9038f3bdb8200a4ec7325ab4afc911e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "344efa052fd0a3a6dc54730e4502f85f7ecc7f30338b6b5dd6eb9196a98ed2f9"
   end
 
   depends_on "python@3.11"
   depends_on "pyyaml"
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/fc/44/64e02ef96f20b347385f0e9c03098659cb5a1285d36c3d17c56e534d80cf/gitdb-4.0.9.tar.gz"
-    sha256 "bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"
+    url "https://files.pythonhosted.org/packages/4b/47/dc98f3d5d48aa815770e31490893b92c5f1cd6c6cf28dd3a8ae0efffac14/gitdb-4.0.10.tar.gz"
+    sha256 "6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a"
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/22/ab/3dd8b8a24399cee9c903d5f7600d20e8703d48904020f46f7fa5ac5474e9/GitPython-3.1.29.tar.gz"
-    sha256 "cc36bfc4a3f913e66805a28e84703e419d9c264c1077e537b54f0e1af85dbefd"
+    url "https://files.pythonhosted.org/packages/ef/8d/50658d134d89e080bb33eb8e2f75d17563b5a9dfb75383ea1a78e1df6fff/GitPython-3.1.30.tar.gz"
+    sha256 "769c2d83e13f5d938b7688479da374c4e3d49f71549aaf462b646db9602ea6f8"
   end
 
   resource "pbr" do
-    url "https://files.pythonhosted.org/packages/52/fb/630d52aaca8fc7634a0711b6ae12a0e828b6f9264bd8051225025c3ed075/pbr-5.11.0.tar.gz"
-    sha256 "b97bc6695b2aff02144133c2e7399d5885223d42b7912ffaec2ca3898e673bfe"
+    url "https://files.pythonhosted.org/packages/02/d8/acee75603f31e27c51134a858e0dea28d321770c5eedb9d1d673eb7d3817/pbr-5.11.1.tar.gz"
+    sha256 "aefc51675b0b533d56bb5fd1c8c6c0522fe31896679882e1c4c63d5e4a0fccb3"
   end
 
   resource "smmap" do
@@ -44,8 +43,8 @@ class Bandit < Formula
   end
 
   resource "stevedore" do
-    url "https://files.pythonhosted.org/packages/62/4c/5445ea215b920e55f40a4f519571d5bfffb81c2f0c9ba4f2c70b1b501954/stevedore-4.1.0.tar.gz"
-    sha256 "02518a8f0d6d29be8a445b7f2ac63753ff29e8f2a2faa01777568d5500d777a6"
+    url "https://files.pythonhosted.org/packages/66/c0/26afabea111a642f33cfd15f54b3dbe9334679294ad5c0423c556b75eba2/stevedore-4.1.1.tar.gz"
+    sha256 "7f8aeb6e3f90f96832c301bff21a7eb5eefbe894c88c506483d355565d88cc1a"
   end
 
   def install

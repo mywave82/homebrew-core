@@ -3,19 +3,18 @@ class CharmTools < Formula
 
   desc "Tools for authoring and maintaining juju charms"
   homepage "https://github.com/juju/charm-tools"
-  url "https://files.pythonhosted.org/packages/eb/e1/684dbbf7a11274a4a5bce15d2cc7c4a054b88b1c51b087d8b3c74a051184/charm-tools-3.0.4.tar.gz"
-  sha256 "47725b0c71baeffc25c2b788fd84a4720bd66ca87515d7a9a28a3acc7cfe0107"
+  url "https://files.pythonhosted.org/packages/5c/44/d865757925098ad4957c02401bed5b7642db2f794a2c4f348ab165e115ab/charm-tools-3.0.5.tar.gz"
+  sha256 "9dc2e8a688033a342f0f840b82d5ba4f118fcc2590085a4153001dcfeea54125"
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "efa73a2f2e7a10b17c1cc6eb480971431ef8204ae0de1ed5979e05f3a0f470a1"
-    sha256 cellar: :any,                 arm64_monterey: "964da390f75ccd5362f28268741bee88fc12a76956ed0589e29e07c923197c2e"
-    sha256 cellar: :any,                 arm64_big_sur:  "2cf597e91e765cdda17a16454b068ba91957f75d94d43345c7cb205127730278"
-    sha256 cellar: :any,                 ventura:        "55f726a1a458369d373109a95902665297e59ac5f735e447b1d2bebfe55f7626"
-    sha256 cellar: :any,                 monterey:       "f7726f042e981ad34118e0f3f069ad9c39ec48c3a359c3bdd5c7d1a0f369abfb"
-    sha256 cellar: :any,                 big_sur:        "34bcc08862d851c54c6ecf5a298fd7be1f1d42a25d9b67085bda4b8d4cbd4699"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8757b78b1e1355fd8c1d2b94c3978ad192978b3218515a829aa40f41f8a9bf62"
+    sha256 cellar: :any,                 arm64_ventura:  "2a8382cd1aff8aabdbbf3980e158fc02b3930bc7ad331c668c425fab8cb1f088"
+    sha256 cellar: :any,                 arm64_monterey: "b22238c85fe17dbaedae756874250c550196f12610cc5f696cb894fddda77d91"
+    sha256 cellar: :any,                 arm64_big_sur:  "ba7781b612b3e105f78eced45fbcfb85a134ae6134639054aa220a5fe6197dd1"
+    sha256 cellar: :any,                 ventura:        "707ee313070c9cf9ecb91e08f7c58b3e4687565f331b3ec73f7864134cde9570"
+    sha256 cellar: :any,                 monterey:       "6bc611db5f1e2b90be66a266ed80b6ab1cb76f207ed4e50bf8fdb1122f0c31ae"
+    sha256 cellar: :any,                 big_sur:        "79a4a0918b723368bea484156fdefec973f64db232b0503b071309cd66956472"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b14471023f91dd4b5d356303fb60650bdf161180b7fba4d0f80cc9b1742629f"
   end
 
   depends_on "rust" => :build
@@ -53,8 +52,8 @@ class CharmTools < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/96/d7/1675d9089a1f4677df5eb29c3f8b064aa1e70c1251a0a8a127803158942d/charset-normalizer-3.0.1.tar.gz"
+    sha256 "ebea339af930f8ca5d7a699b921106c6e29c617fe9606fa7baa043c1cdae326f"
   end
 
   resource "Cheetah3" do
@@ -68,8 +67,8 @@ class CharmTools < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "dict2colander" do
@@ -158,8 +157,8 @@ class CharmTools < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/cf/4d/198b7e6c6c2b152f4f9f4cdf975d3590e33e63f1920f2d89af7f0390e6db/platformdirs-2.6.2.tar.gz"
-    sha256 "e1fea1fe471b9ff8332e229df3cb7de4f53eeea4998d3b6bfff542115e998bd2"
+    url "https://files.pythonhosted.org/packages/11/39/702094fc1434a4408783b071665d9f5d8a1d0ba4dddf9dadf3d50e6eb762/platformdirs-3.0.0.tar.gz"
+    sha256 "8a1228abb1ef82d788f74139988b137e78692984ec7b08eaa6c65f1723af28f9"
   end
 
   resource "pycparser" do
@@ -178,8 +177,8 @@ class CharmTools < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
-    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
+    url "https://files.pythonhosted.org/packages/9d/ee/391076f5937f0a8cdf5e53b701ffc91753e87b07d66bae4a09aa671897bf/requests-2.28.2.tar.gz"
+    sha256 "98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf"
   end
 
   resource "requirements-parser" do
@@ -207,14 +206,19 @@ class CharmTools < Formula
     sha256 "bf947538d76e69ba12ab17283b10355a9ecfbc078e6123443f43f2107f6376f3"
   end
 
+  resource "types-docutils" do
+    url "https://files.pythonhosted.org/packages/e5/c0/adbf5dd6a48ecb9e1ab70321294a17108960c6de11db686d277bc2e7d68a/types-docutils-0.19.1.4.tar.gz"
+    sha256 "1b64b21b609ff1fc7791d3d930f14b56b36ad09029fd97e45e34cc889d671b5f"
+  end
+
   resource "types-setuptools" do
-    url "https://files.pythonhosted.org/packages/61/38/cafb1e7ee4352fb822406e2c3e3658412799a9723ae8ea3783909b75ca61/types-setuptools-65.6.0.2.tar.gz"
-    sha256 "ad60ccf01d626de9762224448f36c13e0660e863afd6dc11d979b3739a6c7d24"
+    url "https://files.pythonhosted.org/packages/62/d0/7df9c20c727fc4c9cc4b389dee6f429ef6bed4604677885029d3c6d70ab5/types-setuptools-67.3.0.1.tar.gz"
+    sha256 "1a26d373036c720e566823b6edd664a2db4d138b6eeba856721ec1254203474f"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
-    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
+    url "https://files.pythonhosted.org/packages/c5/52/fe421fb7364aa738b3506a2d99e4f3a56e079c0a798e9f4fa5e14c60922f/urllib3-1.26.14.tar.gz"
+    sha256 "076907bf8fd355cde77728471316625a4d2f7e713c125f51953bb5b3eecf4f72"
   end
 
   resource "vergit" do
@@ -223,8 +227,8 @@ class CharmTools < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/7b/19/65f13cff26c8cc11fdfcb0499cd8f13388dd7b35a79a376755f152b42d86/virtualenv-20.17.1.tar.gz"
-    sha256 "f8b927684efc6f1cc206c9db297a570ab9ad0e51c16fa9e45487d36d1905c058"
+    url "https://files.pythonhosted.org/packages/3d/ad/906d59bbcb0e6178989cee52166a8a6651ddaea18b38e728eaac22e61cad/virtualenv-20.19.0.tar.gz"
+    sha256 "37a640ba82ed40b226599c522d411e4be5edb339a0c0de030c0dc7b646d61590"
   end
 
   resource "wheel" do
@@ -233,8 +237,8 @@ class CharmTools < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/8e/b3/8b16a007184714f71157b1a71bbe632c5d66dd43bc8152b3c799b13881e1/zipp-3.11.0.tar.gz"
-    sha256 "a7a22e05929290a67401440b39690ae6563279bced5f314609d9d03798f56766"
+    url "https://files.pythonhosted.org/packages/d1/2f/ba544a8a6ad5ad9dcec1b00f536bb9fb078f5f50d1a1408876de18a9151b/zipp-3.13.0.tar.gz"
+    sha256 "23f70e964bc11a34cef175bc90ba2914e1e4545ea1e3e2f67c079671883f9cb6"
   end
 
   def install

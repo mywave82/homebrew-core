@@ -4,6 +4,7 @@ class GstPluginsGood < Formula
   url "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.0.tar.xz"
   sha256 "582e617271e7f314d1a2211e3e3856ae2e4303c8c0d6114e9c4a5ea5719294b0"
   license "LGPL-2.0-or-later"
+  revision 1
   head "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git", branch: "master"
 
   livecheck do
@@ -12,13 +13,13 @@ class GstPluginsGood < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "4a800b1a39e7518602cb21296c08abdb1dcfe7ebed920ef2cfd580b0dc2d6ce1"
-    sha256 arm64_monterey: "c4d2abbfe6114eaf0142c89de4ba7d9df1800a121c0267abc9f61ccfc807f87d"
-    sha256 arm64_big_sur:  "33e08e490fd95c80f3b61f026e954f3437e8d41ded16b92e185c3023089b92e5"
-    sha256 ventura:        "a26420de45ac87f6b0e6d608b79c94fd5810aed64bcb71035129ecae694c18be"
-    sha256 monterey:       "2ea532a30b271aaef446a5fc883855cbc9476e3800e21f7aa5d64f4542ee1f00"
-    sha256 big_sur:        "63f7876ebcd70e73c444e7d0732a7df5b3681894cb9720d8b7e0985f2fd3ad39"
-    sha256 x86_64_linux:   "5e21be50ff33e1b80ec6fe89c5471f017a037ebaa3bf0df858a126c8528e2f35"
+    sha256 arm64_ventura:  "72cd2f3fd1f042e81f13e8e3e0b3bc89b0c960976ca69da0878c9a4a814c7c6b"
+    sha256 arm64_monterey: "d0813248b5b9293d87f4617659f03bbd0dd99bb72cb373d6b296b4afd0129c7b"
+    sha256 arm64_big_sur:  "d96eb9c033d6cad185ee3a18283d6178043da7e801c808895bd83db10e833f77"
+    sha256 ventura:        "5a6bffefff50a1e5f2f30dbecbe66de8579d92d608e9df55f96e667265320344"
+    sha256 monterey:       "53d3a38784ae703469de43f64f8a112835c73747e1a8a44a2b07524cc785edcd"
+    sha256 big_sur:        "6508f010cdfdbcdc2b1dc835b0071679245a60a5d26a3d3f46c090f6c84fe062"
+    sha256 x86_64_linux:   "c0e1873162c0f7f52e0c8e612a1897c3c50cf8740f2a6291fcb70dc512c698ee"
   end
 
   depends_on "meson" => :build

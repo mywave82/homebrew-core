@@ -12,11 +12,18 @@ class Ibazel < Formula
     sha256 cellar: :any_skip_relocation, ventura:        "e339b6a2196906437e1405162bf1b92981e927459b9d1ca27a79ab18fe74ce21"
     sha256 cellar: :any_skip_relocation, monterey:       "e339b6a2196906437e1405162bf1b92981e927459b9d1ca27a79ab18fe74ce21"
     sha256 cellar: :any_skip_relocation, big_sur:        "2cfd4e769a2bcd1ffdc59af42de9af38943b295f0b4465e843aa07a67a429817"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dc3d74bbc7b8971a38e463218d05bdfdd61edc4aa53871f5cee075cec8803e76"
   end
 
-  depends_on "bazel" => [:build, :test]
   depends_on "go" => [:build, :test]
-  depends_on :macos
+
+  on_macos do
+    depends_on "bazel" => [:build, :test]
+  end
+
+  on_linux do
+    depends_on "bazelisk" => [:build, :test]
+  end
 
   # patch to use bazel 6.0.0, upstream PR, https://github.com/bazelbuild/bazel-watcher/pull/575
   patch :DATA

@@ -3,19 +3,19 @@ class Commitizen < Formula
 
   desc "Defines a standard way of committing rules and communicating it"
   homepage "https://commitizen-tools.github.io/commitizen/"
-  url "https://files.pythonhosted.org/packages/f9/a1/29b6efbf910722f173b77546296f5a131cf54e3a49823b23a7558a359994/commitizen-2.41.0.tar.gz"
-  sha256 "5d50093fe546cc3b5217780a8cdfc5a9de6a27ce8aa7db6443e2e47dc2b10b6a"
+  url "https://files.pythonhosted.org/packages/24/d9/48c618e32bcb672b19b22f77c13e6c796fb43ee5931e003b27333c786793/commitizen-2.42.0.tar.gz"
+  sha256 "c4c944408f3d55ca22b1c136e22217c167123c54f46730eb27a1c6503d705c69"
   license "MIT"
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5284f011c74ebbd94131c7ecfa3b65aed48904b3f6c945314800392e79c45e7f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f37cfee3766fb11145426478e2be505d84b690e2c2b8d878f029d49d62282353"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "191cebf7b389d1d254590f7e79ed46882ca7b366cf48a19a34a69b6b62a96b7c"
-    sha256 cellar: :any_skip_relocation, ventura:        "39a2c42c4807580b33638b257416bf89eca3a4ee976b4a1e486681dc44b9dab0"
-    sha256 cellar: :any_skip_relocation, monterey:       "84b0a66dded0b1862adf281f16be2077408f71fda125b20a9b1d857affc7f869"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a0dae7187be4c901eb05c354fe50beafc85d391d4355a4f3ce83cbfce95bc541"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41e48dd863ab0d1578797a8a3334715816cf11e8192d9d449e511c65fe213cc7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b9f8ee458a8656e601f377be97fec3b8be0a8b07c8cebe777258dcb09a31d324"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ff256714d54d72bc11bdba7a3484ccd7d0466a6186b5deb44604509e415cfe9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "92354388616ab928cea84e9310b063bffc62c98b104616500f20bd2a02bff257"
+    sha256 cellar: :any_skip_relocation, ventura:        "122f7da3863cb59334c6fb090d8f3f7d1d01e6e7938d05f31c8a7f1d7c9c289f"
+    sha256 cellar: :any_skip_relocation, monterey:       "fab27c30aea1551d97b21d35ecd67f3bb15f7b1cec6cd459265b4e21f0143777"
+    sha256 cellar: :any_skip_relocation, big_sur:        "917d41be8315ce6fe5f3b234fbe86b60779d0c75593f6820a041a39486e42bd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a39e312b923235facd272f355b508961ba3175f841d24f7252879036e51a944"
   end
 
   depends_on "python-typing-extensions"

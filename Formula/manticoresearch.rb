@@ -1,8 +1,8 @@
 class Manticoresearch < Formula
   desc "Open source text search engine"
   homepage "https://www.manticoresearch.com"
-  url "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/6.0.0.tar.gz"
-  sha256 "3f6ab679a9bddb0672b8f0650ba2024cecfbbc9b7a57917e7dff3ec2073a98ed"
+  url "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/6.0.2.tar.gz"
+  sha256 "319dcdaa17fc4672cdec5cd5a679187f691cd9aec8ce31c3012dc113d99b7d80"
   license "GPL-2.0-only"
   version_scheme 1
   head "https://github.com/manticoresoftware/manticoresearch.git", branch: "master"
@@ -14,13 +14,13 @@ class Manticoresearch < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "b6b02f0a06ae69222c6a1d8ea6f10644fe48e5a5959682f2fd5001daee893090"
-    sha256                               arm64_monterey: "7b3a81a85a5de33278c2c7a794179d65070724f0016199ad9c2313a3c28e7f00"
-    sha256                               arm64_big_sur:  "d053cd46be124556306f0ec634f6e4b13d010feb765851c91cd8f790e2ef783c"
-    sha256                               ventura:        "d706b4a020000cdd4be782b4859c1e1fb0d47c1f095be376cad885f2a6b50f14"
-    sha256                               monterey:       "24a65de3824d44ca796c32ed9b301d741686261671f54dacac2bea2181625260"
-    sha256                               big_sur:        "803164603e829b35e868d9704d5f6de323548cf26bf42a7f3d732c80b9d4b9a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1a1f12ea1bdfe44b4bd10fadc45d01bfa6477328ffd3ac33d3ca66b885c4910"
+    sha256                               arm64_ventura:  "1a7f1eca5d4999b51e14ba55eda00d106ffeadd3f36648c5f7214b11c4f4e2a2"
+    sha256                               arm64_monterey: "cbe75fa0b8d5f9f06d177857dba9ef164334e4f5a46781979b6938b796a88e9d"
+    sha256                               arm64_big_sur:  "0b0aabd17ee2a8f7e9e0a643259e111230f06286e6ba0a2d8cd022903aa4ca9a"
+    sha256                               ventura:        "d7831346f4165106b356a4d41963a5bd7f8de9da150bdfe64d04e86b1c8c2458"
+    sha256                               monterey:       "5a8f02675fa0b63d4b6dbba62b7ea68be3512f543944c2660b8971a93d0a7eac"
+    sha256                               big_sur:        "dfe3fdc2f39b47f775fd135432211a6d08a1e45f266842ab770deb5388de678c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4a3f6273d6ac178773b8f445ba52693b3edc77a8af4abc0c63697088ed3b371"
   end
 
   depends_on "boost" => :build

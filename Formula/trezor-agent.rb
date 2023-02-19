@@ -8,14 +8,14 @@ class TrezorAgent < Formula
   license "LGPL-3.0"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any,                 arm64_ventura:  "156f51ffb92280c4e1e7cab527b9d467e5f2dd16798a1a17d2078d5ffb31a0e8"
-    sha256 cellar: :any,                 arm64_monterey: "1c6c9263c35fa9f64a16a9e322771c0852bcbf8df9c2dc3347b445b49b80a12d"
-    sha256 cellar: :any,                 arm64_big_sur:  "58ead9708ab06cf2d1dd5d295cb1f776211e537d624843a46b13f27067d95e41"
-    sha256 cellar: :any,                 ventura:        "776a88873d33b3a48f22163edbb4611b7f6d8091fbe90c7cc219df2901ae7192"
-    sha256 cellar: :any,                 monterey:       "bda120bfad45e84ba29b5e1260cac28196b084817a5542cfe37ec3ea1fae0ef4"
-    sha256 cellar: :any,                 big_sur:        "e4010ad86f2753127d5d63802a9c18226f79d3485784ea6ddf0007ff36631f32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3a2bddebcdb46958d6d2ec1325f00de40701b4637dd46d797c5048e3a385b92"
+    rebuild 5
+    sha256 cellar: :any,                 arm64_ventura:  "8d3a61a717de3605b564d578dabac8df440882d4089557baeb9cbc1d7a3aeae2"
+    sha256 cellar: :any,                 arm64_monterey: "ab9b602f31b664fb888ece1d1fcfd863683104eabbfeadfe7cc0fb5425462af8"
+    sha256 cellar: :any,                 arm64_big_sur:  "310ef79b2e8ff8744d34f649632cd38b832845899b2d78b7d163be3e8c3e8536"
+    sha256 cellar: :any,                 ventura:        "67d5d63d78f8aa82c7cb0652378c3946a218a236ec0803d6c316b7a1fe447a32"
+    sha256 cellar: :any,                 monterey:       "c89df080589b99c076a7db0ea4f6cb406aa26f69c28ec813451085e9b1b33687"
+    sha256 cellar: :any,                 big_sur:        "0ce1b406739dbb40cd8cebf1a2e9f6bd79a8a773983d653666e42a621d167d22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9edf0c73c8fb670a0424be336454a6e48b4b3052bdcbb6f977a884836f0d0b6"
   end
 
   depends_on "rust" => :build # python-daemon resource depends on cryptography
@@ -74,8 +74,8 @@ class TrezorAgent < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "ecdsa" do
@@ -124,8 +124,8 @@ class TrezorAgent < Formula
   end
 
   resource "libagent" do
-    url "https://files.pythonhosted.org/packages/4e/91/856e10623fa9a88b5e0df0e922b15ba04dd1be3e43742211a81c50d5f5b4/libagent-0.14.6.tar.gz"
-    sha256 "59288e1ff6324f784fec178b562a0240f0883d74a6ccd106f958ad3ed712219c"
+    url "https://files.pythonhosted.org/packages/4e/0f/b48045dd9d12eea5c092aaad4c251443384da700c8d85349fc3c554a2320/libagent-0.14.7.tar.gz"
+    sha256 "8cea67fbe94216f61dbc22fac9d3d749b41b9cfc11393a76b0b0013c204adb98"
   end
 
   resource "libusb1" do

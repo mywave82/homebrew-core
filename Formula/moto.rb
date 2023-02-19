@@ -8,13 +8,14 @@ class Moto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8b81170a8b0637473c104639a9531bbd4567ebabbe3d3eca91f2d58bbefa310a"
-    sha256 cellar: :any,                 arm64_monterey: "8e1fea344de8a395bb1d3509d1873c16dfafa37eb78acfd7f20daa28874d53aa"
-    sha256 cellar: :any,                 arm64_big_sur:  "001a0ea87a16aac21e23bd04affb9cd50dd7eaf95013f0cd3ccfa463d346d681"
-    sha256 cellar: :any,                 ventura:        "8f01c29586088baaaa3f882d0aa23497f43cbcd8ef38ca7e260629f1d13a3d2a"
-    sha256 cellar: :any,                 monterey:       "3110a1177a65ebd01cf90f6b58112810472578a2bbc7dcbe5f52ec702cace2d1"
-    sha256 cellar: :any,                 big_sur:        "ba05b2400d5f8cfdb6e1e4992a55289376b3f1f427f71ede5c5623626429b5fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72f54790858bcda5b035c6f04207ae95040b387b9737a2f5772059576fdc17ed"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "03713f7eae2f49f6c52b0a1edf60811656cf029442c7259d7b4fbe0a9faf9bbc"
+    sha256 cellar: :any,                 arm64_monterey: "c2512b04ebd268fb19cf559e2c3c506c205c2c9897ae84109c2e941eb1319de0"
+    sha256 cellar: :any,                 arm64_big_sur:  "197810dba85863b91be1f2ad499821469a8a3f2a45e27700eb552bf66e435a48"
+    sha256 cellar: :any,                 ventura:        "7df7fe4d1b60e23b93113f18ef8c2d5a037138fd34ae1ad4408af8696393a13f"
+    sha256 cellar: :any,                 monterey:       "d5b6688c615e90474cf1dd2a775f24bc7472a48d144469c9d8d41e7a3dd82a87"
+    sha256 cellar: :any,                 big_sur:        "a9ebe43c99e73aa69878822697a73059ab9e38a89dad5284cb04a7561b5b6ef7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8aec9c37b416b0cd975665ef3b66b95f00ae22550d95d500b81e3bb9e942971d"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -29,8 +30,8 @@ class Moto < Formula
   end
 
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/b5/9c/1061fce18ff0442fa004e464299f8c5c2eb119ce7ee5f5eee1d8034e1b3d/aws-sam-translator-1.58.1.tar.gz"
-    sha256 "cd60a19085d432bc00769b597bc2e6854f546ff9928f8067fc5fbcb5a1ed74ff"
+    url "https://files.pythonhosted.org/packages/49/f2/991ddbe70dec85bebb0bce18f7b4902ad46885f91ffa27108df061cf3ff8/aws-sam-translator-1.59.0.tar.gz"
+    sha256 "9b8f23a5754cba92677d334ece5c5d9dc9b1f1a327a650fc8939ae3fc6da4141"
   end
 
   resource "aws-xray-sdk" do
@@ -39,13 +40,13 @@ class Moto < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/f5/06/b3723636e094e833bba96b33cee496cd47ccc7362f5f3422d15d96644f7f/boto3-1.26.64.tar.gz"
-    sha256 "b0e3d078ec56bc858cc5edae4cda3eed2b1872055828cf5f22d83fc6f79a6d40"
+    url "https://files.pythonhosted.org/packages/8d/59/72ed66c45aacdc1339423ed2f4e350594ed233deabac726dbcd69b4d847f/boto3-1.26.67.tar.gz"
+    sha256 "c2e21ac64370fee1f3dccd97b4767e89d046c45c00faec27c36405618e34c7e5"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/60/91/cda3984eed3ad1cd58c192184b647ab45a5f696c19555959076e7be81cd2/botocore-1.29.64.tar.gz"
-    sha256 "2424c96547eeb9b76eb5bcee5b5bc01741834f525ecc4d538d71d269c7ba6662"
+    url "https://files.pythonhosted.org/packages/fb/e3/5557a3301221e8c984344acce43af61ed2ff99cf39aefa4305e400ef3620/botocore-1.29.67.tar.gz"
+    sha256 "0ccec4a906b6b8c7bb6bc5226509059ee9ed94d3cf1014487ef5b8e56801e6a3"
   end
 
   resource "certifi" do
@@ -74,8 +75,8 @@ class Moto < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "docker" do
@@ -184,8 +185,8 @@ class Moto < Formula
   end
 
   resource "openapi-spec-validator" do
-    url "https://files.pythonhosted.org/packages/47/e1/057d6886455a62f58055e8909c98ef96908a364a1cfb94b36e39accb9d51/openapi_spec_validator-0.5.4.tar.gz"
-    sha256 "68654e81cc56c71392dba31bf55d11e1c03c99458bebcb0018959a7134e104da"
+    url "https://files.pythonhosted.org/packages/5b/d8/5a291b895e79bdab621398a66cbd1af27ed957c016b7f8b0667fbf62569f/openapi_spec_validator-0.5.5.tar.gz"
+    sha256 "3010df5237748e25d7fac2b2aaf13457c1afd02735b2bd6f008a10079c8f443a"
   end
 
   resource "packaging" do
@@ -279,8 +280,8 @@ class Moto < Formula
   end
 
   resource "types-toml" do
-    url "https://files.pythonhosted.org/packages/01/59/966378cfc0cb02e24ccaa7c1029cca5821f94f40a9c4649095b61890cd9a/types-toml-0.10.8.2.tar.gz"
-    sha256 "51d428666b30e9cc047791f440d0f11a82205e789c40debbb86f3add7472cf3e"
+    url "https://files.pythonhosted.org/packages/79/25/20a49e2c341b5438d46aea4f8cfa152bdebdd47385dfd8084a9682b90d8b/types-toml-0.10.8.3.tar.gz"
+    sha256 "f37244eff4cd7eace9cb70d0bac54d3eba77973aa4ef26c271ac3d1c6503a48e"
   end
 
   resource "urllib3" do

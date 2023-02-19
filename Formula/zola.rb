@@ -1,24 +1,22 @@
 class Zola < Formula
   desc "Fast static site generator in a single binary with everything built-in"
   homepage "https://www.getzola.org/"
-  url "https://github.com/getzola/zola/archive/v0.16.1.tar.gz"
-  sha256 "c153fd0cc1435930a4871165e6ad4865e3528465f3f41d0671a9837121688ac7"
+  url "https://github.com/getzola/zola/archive/v0.17.0.tar.gz"
+  sha256 "a7254554e61f2c737bc3981a6278e0fbac5dc685e5d90c014fc60eced99bf55c"
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "89d9d4295d0e405ebc3ea2035974b9221cf12711ac72d0c518f078a0894a1eed"
-    sha256 cellar: :any,                 arm64_monterey: "1254587c6c0fb421a6d1209de41530a5fc41e8bea240fe37d5ddc1cc86e7ea7b"
-    sha256 cellar: :any,                 arm64_big_sur:  "127d6a120df4d4fb5298c645a66ab956255cb2b38c031c94ae3040d4b1b0bd6e"
-    sha256 cellar: :any,                 ventura:        "20495c0b33e03b214e32bca0136bdac8746978893201a48a7dfa52440736d3ab"
-    sha256 cellar: :any,                 monterey:       "bae23b7e40aa396aea13d0732fe96ac915cad05605bfc392c9ac988afa27f57f"
-    sha256 cellar: :any,                 big_sur:        "54b1fb1bcbb4c6bfde0a3f035b7e97f794a7547b2385f0feb8c4cbf999a542b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e081a32aa135535a946470a38ee473002aede9c3bb0ddd1afe58a5c935376952"
+    sha256 cellar: :any,                 arm64_ventura:  "899dbfde2dab83f023b97e31e53fdc8cf5b926f58c7d14de38cef67d7a570f19"
+    sha256 cellar: :any,                 arm64_monterey: "a3e47b9ed2033a9ee57d9c61a39274cd748639344f9c03b12c66c8babd633f67"
+    sha256 cellar: :any,                 arm64_big_sur:  "82e9f31ce4e51e1ff1c2b534a4168026f1519d596cdf1ff770417be84adc5958"
+    sha256 cellar: :any,                 ventura:        "90299893eeb513c716d217b75d7226bfaebf9cb9812f9d945c71cb7febd409f3"
+    sha256 cellar: :any,                 monterey:       "1c62ba0f00b9272855f6f8a2e28cde4a57ba241372857441579f568c5b6e092c"
+    sha256 cellar: :any,                 big_sur:        "7a8400732bae7b27befdb8d91ade697fd5aa32f49d175b5f9d98597448623c6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f1682f5d328963696b24e1102d3b2cb941c254d81c2ed9710d7ab8402373340"
   end
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
-  depends_on "libsass" # for sass-sys
   depends_on "oniguruma" # for onig_sys
 
   on_linux do
@@ -29,21 +27,19 @@ class Zola < Formula
     ENV["RUSTONIG_SYSTEM_LIBONIG"] = "1"
     system "cargo", "install", "--features", "native-tls", *std_cargo_args
 
-    bash_completion.install "completions/zola.bash"
-    zsh_completion.install "completions/_zola"
-    fish_completion.install "completions/zola.fish"
+    generate_completions_from_executable(bin/"zola", "completion")
   end
 
   test do
     system "yes '' | #{bin}/zola init mysite"
-    (testpath/"mysite/content/blog/index.md").write <<~EOS
+    (testpath/"mysite/content/blog/_index.md").write <<~EOS
       +++
       +++
 
       Hi I'm Homebrew.
     EOS
-    (testpath/"mysite/templates/page.html").write <<~EOS
-      {{ page.content | safe }}
+    (testpath/"mysite/templates/section.html").write <<~EOS
+      {{ section.content | safe }}
     EOS
 
     cd testpath/"mysite" do

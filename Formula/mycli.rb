@@ -9,14 +9,14 @@ class Mycli < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "0b8c4f827069621f36abd6271e8113115b038871dc45eec0612c761cf25046f6"
-    sha256 cellar: :any,                 arm64_monterey: "193f6a7027770c9044d4b5ce790a3e8911089dbf9c3ed393f81119f88048f428"
-    sha256 cellar: :any,                 arm64_big_sur:  "f2250565be2f274be5abbee1985ff2d61ec6ab5bc9731615f62639408ea78163"
-    sha256 cellar: :any,                 ventura:        "bab589ea0518ed4a2c0350ce4a70ad0e86145766c36aa410af425a52d7a68f26"
-    sha256 cellar: :any,                 monterey:       "9fb2a9aea8671cb663546368f4e63b57ed9371929e452e2be216080421ca3ab8"
-    sha256 cellar: :any,                 big_sur:        "30ae98cbc5eeb3a6afe19a455c39f6f1a6e9720fcfacdd8c13c6a216537baece"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56cd2ee7ea73090f1af8970581ee4455b80795d149399b9b1b06b21c073c42b3"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "03bae901b11bab34471ad3ae9a60724fe070c39aab56e69234d75839f08c9894"
+    sha256 cellar: :any,                 arm64_monterey: "86958cc8f00b6839642dfeea836d1302e6f06d58079a83e5a3feb12d5dff09d2"
+    sha256 cellar: :any,                 arm64_big_sur:  "e2d4a95290e13660f0a53e5a1807b0e2a1d1a98d3b9105c95f939449bbbcafe0"
+    sha256 cellar: :any,                 ventura:        "dd993cbe26743c61bdb5b662a8a47234b87064ae72d966a23500fcfb68a693ac"
+    sha256 cellar: :any,                 monterey:       "77711194f05b41351dafc18adfe49bea0791a23da84010ac4fad39439922c6fb"
+    sha256 cellar: :any,                 big_sur:        "0f73a5c64a42d4d3ccd3d55ccd4ff5fe77151df8a5dc88bbb4d0b6c0c5331657"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aab23d7af25367a1b3ebc66ab8e94d31ad64894e6cf6efb12d8ed44a39ce51c2"
   end
 
   depends_on "rust" => :build
@@ -88,8 +88,8 @@ class Mycli < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/d7/c0/cabf73bd17f971051ebbf1736605505829963b40ca7c46ce659cf82f0a90/sqlglot-11.0.0.tar.gz"
-    sha256 "6bd55a4b5898de900126390438a7cd13f77b042527f0711524e3288018d292fe"
+    url "https://files.pythonhosted.org/packages/9f/94/e28696f966305c717710fc93ce297ab64b294dde2d6d56d13b611c444818/sqlglot-11.0.1.tar.gz"
+    sha256 "2bdeeaa20c215d48ec28a61057d76568d6a9aeb19af79b0470f7c2e42619aa0c"
   end
 
   resource "sqlparse" do

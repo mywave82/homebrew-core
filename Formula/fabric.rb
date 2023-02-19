@@ -10,13 +10,14 @@ class Fabric < Formula
   head "https://github.com/fabric/fabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cf7bb1caee135552ac0f2bba776abf5ef14e1c32ae995b179aebf26591990138"
-    sha256 cellar: :any,                 arm64_monterey: "162f44772f798862a5b8ac6d6db3da13ab6b93a61245691ee0c9b201ddbe30d7"
-    sha256 cellar: :any,                 arm64_big_sur:  "5225c34cf1ae47cd4041b592d7e9bc8616ffb03ed0008d1613f599482a4e52cb"
-    sha256 cellar: :any,                 ventura:        "4da7963c27e6a30c36baebef71a2d3212cb683977bc4ce40576b99a4423de92b"
-    sha256 cellar: :any,                 monterey:       "5304d25af9408d9a99b47337877ec56f7c8a49fca4ad0f81d08edfc0f2c87eab"
-    sha256 cellar: :any,                 big_sur:        "9e6429071b0f91566698a828394e9ef2fead178634e475f9af2d11bb62f37737"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c78c2c45cce802100c99a40fcd20aae1ba0d7acfceda066e427f4e12404566a4"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "3e7a998cbf4c4b494913fd5b490993da538664297fd1914cc8515b690c884b18"
+    sha256 cellar: :any,                 arm64_monterey: "03e191da03a9635719ddf90cb9609694efd61bca6951f5546d598887464b2691"
+    sha256 cellar: :any,                 arm64_big_sur:  "f1c8329161860111aeee27be89c54b4b33ca9240a3d7bb16231ce278998e48b1"
+    sha256 cellar: :any,                 ventura:        "9020bd6bee66200685748c2bb2d7e88c6e67e3f1c14f76d0c9d541b50742ffa5"
+    sha256 cellar: :any,                 monterey:       "b0b5a088a0fe8edca05cd28bd58ce37ff61a7ba229d130e783fd053623f87ca6"
+    sha256 cellar: :any,                 big_sur:        "7be3304df4e392f04a6adc9990fb4e15467b71ce0129d4eb6d5ec1ef879836a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e15b8c75bb33f2b76915cda69bead546dd2a6c354078820712dad79736a826c2"
   end
 
   depends_on "rust" => :build
@@ -35,8 +36,8 @@ class Fabric < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "decorator" do

@@ -8,14 +8,14 @@ class Fdroidserver < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "66b2c638cbcbf963de84bae7d0572419178349db543c3862cb5b61d97d89c907"
-    sha256 cellar: :any,                 arm64_monterey: "246b048e093d0ac5ca13e54f369c58d9d1af193f1b96c33ba71a8c2b08fb855a"
-    sha256 cellar: :any,                 arm64_big_sur:  "9f9ad2671bc040d79b6a5a17a6a4ab4e5b0c6714af7b943663936e6ac653fc40"
-    sha256 cellar: :any,                 ventura:        "231bcfc53add080b1d75ad13d3e3d2557f0bbfd0e424e9d2fceb07f4212f6923"
-    sha256 cellar: :any,                 monterey:       "9acb684fc911ce38dbbd424eddc5acf3ee9a8165950c8fe3d189b4abf379c940"
-    sha256 cellar: :any,                 big_sur:        "1eca9a66a0ca3d02f7318ef9d35134bfa6156ef34852b06bd2642d0ec84b0917"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13cea37affa22bccd06c52e84b6a7bf16e569ba044ef29f4131f5a6dd1c483e1"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "8795d8eb40b12a28959cb8846784ab7d23253846cba92404d17c90ecf4b66570"
+    sha256 cellar: :any,                 arm64_monterey: "00db53ef588bc4880758081e3324919099f15f374b6eae25c8f073e139991b0a"
+    sha256 cellar: :any,                 arm64_big_sur:  "091af75c19d0ba78f6d3c9e634bc40f43a71fac106f38260c20f52dc6ebf2246"
+    sha256 cellar: :any,                 ventura:        "da0fc80864c18a6a0da65f14324f161cb6e2eb18ce129726a7c5a6e23a4846d7"
+    sha256 cellar: :any,                 monterey:       "6546ae0a41615974c2f92f94a2226bb6aabbc73b704568eceefce56217bc2c11"
+    sha256 cellar: :any,                 big_sur:        "1b094faccfdd690496cd2aee61a16ada7c7c236659aa342288ffc51de7c2fd37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "853d52415536f215b05675d316ec50b7ab19d222ff3f9538411c4571792f5a5e"
   end
 
   depends_on "pkg-config" => :build
@@ -97,8 +97,8 @@ class Fdroidserver < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "cycler" do

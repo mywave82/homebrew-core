@@ -1,19 +1,19 @@
 class RubyBuild < Formula
   desc "Install various Ruby versions and implementations"
   homepage "https://github.com/rbenv/ruby-build"
-  url "https://github.com/rbenv/ruby-build/archive/v20230208.tar.gz"
-  sha256 "b4083e5b94f700f8336fa2510e4be4d0a48829d94f425a23f10e7c108c3d96ee"
+  url "https://github.com/rbenv/ruby-build/archive/v20230208.1.tar.gz"
+  sha256 "c4fca40b3a4646a9295c8d5e8b0535a194ae45228c326629e1455b8a87697c6d"
   license "MIT"
   head "https://github.com/rbenv/ruby-build.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "da2aad7da7a965a9210b00c89d962c523b87d280947513237f75375e3ae86d77"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c530e52acfdbb815b7f348eebf793342cfd3cd74a2f148bb95514c516fba7a46"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "169c6995f66d17e9ca477b739ea896956d70a1c3ecb1057661b98c3034c8f946"
-    sha256 cellar: :any_skip_relocation, ventura:        "6d48a44680b49ab4df425c698d09c2e91f48345906b21e0c8ec2a809039434f2"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f49bbbee0db2284e48fd0061226549ef4690bb03901fae9c35d31809c8e1b4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0f29e369b551871440d4aca043d2771a1e3a7ef2f01f531a5d4a1d938ac7a291"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87a5c809d0f0e9e9ac5fc96f4eddd6df856b99c452086d8b41a442535623551e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "949900a35df43a7aacab78bf973a6a5da38aee4e21e2d0e9180f52487f65dad5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "560dea6e6df04bcc55fd7f4dde5bd6dd3529bbe325cf534c43a066165cc0c889"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "059e85d4e66bfd4d85e46ab86ce0fbf2bc832d015aa081855f35e073001cb4e1"
+    sha256 cellar: :any_skip_relocation, ventura:        "4163f52bae37a6dd9656b6e48e7b69222fd7900671700ed0b89a18ea7f192af7"
+    sha256 cellar: :any_skip_relocation, monterey:       "3b7a88cb0c352dcd6d9824ac5265e299fad5e4737e22da0b69bfc462647abca1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "37e968fad896c0fef4b608457207f0b6ee670cd16ba89c0519692fce9ecfd047"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02416bdee3d58c3de48184676847fdb7c4356332c1a6b3df752c361798783921"
   end
 
   depends_on "autoconf"

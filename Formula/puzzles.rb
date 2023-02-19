@@ -2,9 +2,9 @@ class Puzzles < Formula
   desc "Collection of one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
   # Extract https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles.tar.gz to get the version number
-  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20230206.49841bd.tar.gz"
-  version "20230206"
-  sha256 "95fa6fb6711d4ddac494f957ad528efe1ed0734b9fb09bc56b98394c797124c7"
+  url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20230218.3a3e491.tar.gz"
+  version "20230218"
+  sha256 "9486cdd8f1a4a42485ff9dea3b7e3716c3dc2e59bb3f1c2e5a45bb09441d1460"
   license "MIT"
   head "https://git.tartarus.org/simon/puzzles.git", branch: "main"
 
@@ -18,13 +18,13 @@ class Puzzles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c8ccc891d377b7e7453ca3a8123cba976be3f747cc997362b138a3cf8890bcb3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e118e34a15e6a9fafd4806f55074ec42b6409e3e5087bb107d2ffbdc464104b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9a4fcdfbd21a318d6b1f724ea78dff269da6d7262a4b5a56c5dc3203eae35b9"
-    sha256 cellar: :any_skip_relocation, ventura:        "87c1d38dde8001ce40ab0bac40832d15319e7a7f17c700466c451fc237cceb2b"
-    sha256 cellar: :any_skip_relocation, monterey:       "23f541370ea9466b833766226610317446b083135a086831ac68d65f86025ae4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff647f0e755a45d50818851ad47e18a8c3977d8c23182a3105ca5fabe01b433b"
-    sha256                               x86_64_linux:   "159a1a75a523fdab823e0d4c3d6d0a0982588c1870ccadfb3848fafaf8849d9a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c78ed01371fea061be32040ac0b8876288c6066a4dc0a7da57a28210bacb028d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "57e3dbc24799fa1484d58ae9bebc0724b52992f8659609d4e6312e9210ab696d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "527a845b396d3ead706b8088445a755a8382667f593ce34237ca66e98b446cb1"
+    sha256 cellar: :any_skip_relocation, ventura:        "709a3d67fa3682ea4b87cdbb510bdbb31900799574e9472d73edda6a48316eec"
+    sha256 cellar: :any_skip_relocation, monterey:       "ccc8b977c53234fb016b030b3897f2ab3bfeec87d9ae977fc9df3341235f96d9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cf873aa62c202b8242b15a8c6bf51ea65b653102641b85a7c26294160fc28024"
+    sha256                               x86_64_linux:   "386ad5544cfed3960957964bdc32b360e6eba3e27b2f7df0f042250b6cd47b73"
   end
 
   depends_on "cmake" => :build

@@ -2,20 +2,19 @@ class Jabba < Formula
   desc "Cross-platform Java Version Manager"
   # fork blessed by previous maintener https://github.com/shyiko/jabba/issues/833#issuecomment-1338648294
   homepage "https://github.com/Jabba-Team/jabba"
-  url "https://github.com/Jabba-Team/jabba/archive/0.12.0.tar.gz"
-  sha256 "15a142239869733d7f0fe8c0cc0cd99f619e5bc8121ebabc9c28c382333b89c0"
+  url "https://github.com/Jabba-Team/jabba/archive/0.12.1.tar.gz"
+  sha256 "f4daa202771ad28108a0bf7fda441ad750214295fb590804d1f0735a41401257"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/Jabba-Team/jabba.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "68d5ced2e54abef37987df91b3478df3d2a25a319ca3d5cfe9c0db0291bfe77b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fab37b12d5cf54f5c1a3baaa864a479a6eb8fcef9fc030b7ea2a677cf088b500"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d9d75c5f9d93043021ddff479b8d169e15aa0258b13fcd7e0561062a04768e8c"
-    sha256 cellar: :any_skip_relocation, ventura:        "ca99b445c3d328f265c4db633ffbacd0ca23efc4ea8330e030e2a5b8c18f8b0c"
-    sha256 cellar: :any_skip_relocation, monterey:       "9f0ffb87c4003e40fe591f1773671f91b596e205fbc2a41bd3128dea7b623274"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0526621c1a08e1a62fb5f97a9ced58b3e53e55c25197d9b28b1438041f8cf636"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51d14f559339f3a71c005d66e27cc927b2d3318a6e41a460701780592e338e45"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2cc7bf2459997c184493c2b3ee2db66439c02fee4cd65a70ffee3c8f4fb00311"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e89e5313435d4ef86ad7a6670f87cacaac13cd9cfbad3d34d987a53196f12dc8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e685947d36c86746a9dc1819a29e8a9fa03d16a4915263d45b37802ca8845e0"
+    sha256 cellar: :any_skip_relocation, ventura:        "d3d425f7777ca12f8ffc0e440d7303bb1ac6a19bf8bafdf326c2e2cf95830f42"
+    sha256 cellar: :any_skip_relocation, monterey:       "7d1174ab957c14353ac767f792be07832331e995a1e15d947b1f1e256557bc93"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5e42f37a50d9a1ac185ca3adfefbe341ffd8150d8a49e6bd6b063076a528986d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "315baf57135ee0d42aec6d36ff02509e07b5e6de76832ee60f0f47bb3d5c6f1b"
   end
 
   depends_on "go" => :build

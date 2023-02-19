@@ -4,6 +4,7 @@ class Ledger < Formula
   url "https://github.com/ledger/ledger/archive/v3.3.0.tar.gz"
   sha256 "42307121666b5195a122857ec572e554b77ecf6b12c53e716756c9dae20dc7c1"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/ledger/ledger.git", branch: "master"
 
   livecheck do
@@ -12,19 +13,20 @@ class Ledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a6b0e80aa111fe117044138e21251ef5ffd7d33d19747826c46fc7acb462cbde"
-    sha256 cellar: :any,                 arm64_monterey: "3d3b2e6b3371c19440d9a286697fbff1207e48eaf43e92f37b91c485dcb69c1e"
-    sha256 cellar: :any,                 arm64_big_sur:  "3f9948241712f76991a62c63d0c63d111c37df1af29c2f3ccedd100b52fb0760"
-    sha256 cellar: :any,                 ventura:        "4221e410637fa6eef3519cc6e22c858e361c8b9a3ebd8f5869054befebf1839c"
-    sha256 cellar: :any,                 monterey:       "9ea0ca4261eb3692db999fa39f5f3961cb263cb3b52ff6e8cfb904bec314ed09"
-    sha256 cellar: :any,                 big_sur:        "14271a46b2ebe02d97e2ca83c22cc7a6a9aa30c351a7165025c61324061d4427"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9c9d9dacd8bef370fb955d82631dd102b04a29a148dfb153e865796834bf5d9"
+    sha256 cellar: :any,                 arm64_ventura:  "9b14daf25025e233e72db26bc9697e56774d83bb71eae1130b97f3906796e95a"
+    sha256 cellar: :any,                 arm64_monterey: "c32cc75c88d2c4ea27d1b680f21397b27354ea184819930c07c94e937ef445d9"
+    sha256 cellar: :any,                 arm64_big_sur:  "6ee16e75e6e74051de07bd1a178eb44b05749db8cb934af12d087d5a329fddd9"
+    sha256 cellar: :any,                 ventura:        "a9e730b8a4958f20454ae7e8a89648663fb29b472f885136ef556fc4a42b16cc"
+    sha256 cellar: :any,                 monterey:       "62cfdcd7d9f6a7f92145c4c84e6d9ae89971b0d37225f0e16960226807a5e645"
+    sha256 cellar: :any,                 big_sur:        "3df65aadbb26d68f24a56c2e29c2dac86422b62e93ed1795673948f246502165"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54d4654634c5ed0b145aff5be831daf8bae2b7720caadae902de38da94a4b82c"
   end
 
   depends_on "cmake" => :build
   depends_on "texinfo" => :build # for makeinfo
   depends_on "boost"
   depends_on "gmp"
+  depends_on "gpgme"
   depends_on "mpfr"
   depends_on "python@3.11"
 
@@ -48,6 +50,7 @@ class Ledger < Formula
       -DBUILD_WEB_DOCS=1
       -DBoost_NO_BOOST_CMAKE=ON
       -DPython_FIND_VERSION_MAJOR=3
+      -DUSE_GPGME=1
     ] + std_cmake_args
     system "./acprep", "opt", "make", *args
     system "./acprep", "opt", "make", "doc", *args

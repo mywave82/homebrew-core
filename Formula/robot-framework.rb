@@ -9,14 +9,14 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "3db4903cae6c0695c6f5eca419992b3422370ecd10231d1df525d0015a408295"
-    sha256 cellar: :any,                 arm64_monterey: "da66c2e2e0ad6e703b1076de5af6ed68f71fd64a692a4247e41348becaf4ea53"
-    sha256 cellar: :any,                 arm64_big_sur:  "9b08b6cd25dd4b4a52794c7cc99fe9c7c16d95636e7b3cb67fbdcdb3560aeb04"
-    sha256 cellar: :any,                 ventura:        "83456744125109a6ae77b1954fefa25840b3f3cd6b3d261cb0537fa3f76603e3"
-    sha256 cellar: :any,                 monterey:       "e1fb31d04eedea2d55b505a5bca25e951874a8dfe2a23f22fb7cd8d292e3a8b4"
-    sha256 cellar: :any,                 big_sur:        "cbe3f99876b21c9da916314a4d738a0dd362592847c3fcfdbc3b6577e384996c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f2026a65666c9cd65708fe59bc86e6f33e1c5ecfb893a1aa1ea2073ab8df608"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "c2a04867942944d387e63bf49ac6799e6fa65f173727d874b96ecf80f0af9360"
+    sha256 cellar: :any,                 arm64_monterey: "00f401f7d4b5c8ffe3022c2aff0f2445219f3a50d9b15e89d55d77528cf7edfa"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4a85b69cc8920efff619f6f9b4e29d00db44b227cd1d26d511a1b1203a3850f"
+    sha256 cellar: :any,                 ventura:        "4ba65b1a4269808136392bad465897183e99aa8ac3e5671393bdfbdf6d69c95b"
+    sha256 cellar: :any,                 monterey:       "d5d37b387bfce4c7beed2b0c2ea5dd9255af4ca5b4c79e8ab8020876a2cb90f2"
+    sha256 cellar: :any,                 big_sur:        "fee302f69ce840658deaa42925818f429fa1059baf5cb5a377922fed5c51161c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "238e66ff71dab2c70ded06cb70140518dd7d8e232d4b20abf47b795840f2cd69"
   end
 
   depends_on "rust" => :build
@@ -50,8 +50,8 @@ class RobotFramework < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/12/e3/c46c274cf466b24e5d44df5d5cd31a31ff23e57f074a2bb30931a8c9b01a/cryptography-39.0.0.tar.gz"
-    sha256 "f964c7dcf7802d133e8dbd1565914fa0194f9d683d82411989889ecd701e8adf"
+    url "https://files.pythonhosted.org/packages/6a/f5/a729774d087e50fffd1438b3877a91e9281294f985bda0fd15bf99016c78/cryptography-39.0.1.tar.gz"
+    sha256 "d1f6198ee6d9148405e49887803907fe8962a23e6c6f83ea7d98f1c0de375695"
   end
 
   resource "h11" do
